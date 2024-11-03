@@ -1,0 +1,33 @@
+version: 1.0.{build}
+branches:
+  only:
+    - main
+
+environment:
+  nodejs_version: '14'
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
+
+build_script:
+  - npm run build
+
+test_script:
+  - npm run test
+
+deploy_script:
+  - npm run deploy
+
+artifacts:
+  - path: dist
+    name: $(ProjectName)
+
+deploy:
+  provider: GitHub
+  username: $(github_username)
+  password: 
+    secure: $(github_token)
+  repository: $(github_repo)
+  on:
+    branch: main

@@ -1,0 +1,36 @@
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Игровое поле */
+.game-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    width: 500px;
+    height: 500px;
+    /* border: 1px solid black; */
+}
+  
+.game-area div {
+    background-color: #ccc;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+  
+.goblin {
+    background-image: url('../img/goblin.png');
+    background-size: cover;
+    border-radius: 50%;
+        /* width: 100px;
+    height: 100px; */
+}
+  
+  
+
+  

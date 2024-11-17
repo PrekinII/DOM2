@@ -14,8 +14,8 @@
     width: 500px;
     height: 500px;
     /* border: 1px solid black; */
-    cursor: url('../img/hammer.png') 16px;
-    background-size: 32px 32px;
+    cursor: url('../img/hammer_1.png'), auto;
+    
 }
   
 .game-area div {
@@ -32,7 +32,24 @@
         /* width: 100px;
     height: 100px; */
 }
+
+.Score, .Miss {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
   
+  .Score {
+    background-color: #ccc;
+    color: #28425c;
+  }
+  
+  .Miss {
+    background-color: #ccc;
+    color: #000000;
+  }
   
 
   

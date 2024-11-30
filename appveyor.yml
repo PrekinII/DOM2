@@ -7,14 +7,18 @@ environment:
   nodejs_version: '14'
 
 install:
-  - ps: Install-Product node $env:nodejs_version
-  - npm install
+  # - ps: Install-Product node $env:nodejs_version
+  # - npm install
+  - npm install -g yarn
+  - yarn install
 
 build_script:
-  - npm run build
+  # - npm run build
+  - yarn build
 
 test_script:
-  - npm run test
+  # - npm run test
+  - yarn test
 
 deploy_script:
   - npm run deploy

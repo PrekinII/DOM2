@@ -52,6 +52,16 @@
 
 //}
 
+export function initGame() {
+  const game = new GameController();
+  game.startGame();
+}
+
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', initGame);
+}
+
+
 class GoblinPosition {
   constructor(gameAreaSelector = '.game-area') {
     this.gameArea = document.querySelector(gameAreaSelector);
@@ -64,7 +74,7 @@ class GoblinPosition {
   drawBoard() {
     this.gameArea.innerHTML = '';
     this.cells = [];
-    
+
     for (let i = 0; i < 16; i++) {
       const cell = document.createElement('div');
       cell.classList.add('cell');

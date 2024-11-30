@@ -48,11 +48,29 @@
 // setInterval(moveGoblin, 2000);
 // moveGoblin()
 
+//class GameBoard {
+
+//}
+
 class GoblinPosition {
   constructor(gameAreaSelector = '.game-area') {
     this.gameArea = document.querySelector(gameAreaSelector);
-    this.cells = this.gameArea.querySelectorAll('div');
+    //this.cells = this.gameArea.querySelectorAll('div');
+    this.cells = [];
     this.currentPosition = null;
+    this.drawBoard();
+  }
+
+  drawBoard() {
+    this.gameArea.innerHTML = '';
+    this.cells = [];
+    
+    for (let i = 0; i < 16; i++) {
+      const cell = document.createElement('div');
+      cell.classList.add('cell');
+      this.cells.push(cell);
+      this.gameArea.appendChild(cell);
+    }
   }
 
   getRandomPosition() {

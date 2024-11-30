@@ -20,18 +20,18 @@ test_script:
   # - npm run test
   - yarn test
 
-deploy_script:
-  - npm run deploy
+# deploy_script:
+#   - npm run deploy
 
-artifacts:
-  - path: dist
-    name: $(ProjectName)
+# artifacts:
+#   - path: dist
+#     name: $(ProjectName)
 
-deploy:
-  provider: GitHub
-  username: $(github_username)
-  password: 
-    secure: $(github_token)
-  repository: $(github_repo)
-  on:
-    branch: main
+# deploy:
+#   provider: GitHub
+#   username: $(github_username)
+#   password: 
+#     secure: $(github_token)
+#   repository: $(github_repo)
+#   on:
+#     branch: main

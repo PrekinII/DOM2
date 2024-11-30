@@ -51,6 +51,9 @@
 //class GameBoard {
 
 //}
+export default function demo(str) {
+  return `Demo: ${str}`;
+}
 
 export function initGame() {
   const game = new GameController();
